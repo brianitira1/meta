@@ -212,3 +212,50 @@ var letters = "abc";
 letters.match(/a/);
 
 console.log(letters);
+
+//functional programming
+
+var currencyOne = 1000;
+var currencyTwo = 0;
+var exchageRate = 0.75;
+
+function convertCurrency(amount, rate) {
+  return amount * rate;
+}
+
+currencyTwo = convertCurrency(currencyOne, exchageRate);
+
+console.log(currencyTwo);
+
+//recursion in javascript
+
+let counter = 3;
+function example() {
+  console.log(counter);
+  counter = counter - 1;
+  if (counter === 0) {
+    return;
+  }
+  example();
+}
+example();
+
+//scope in javascript
+
+var a = 1;
+var b = 2;
+var c = 3;
+function testScope() {
+  var a = 4;
+  let b = 5;
+  const c = 6;
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+testScope();
+console.log(a);
+console.log(b);
+console.log(c);
+
+//object oriented programming
