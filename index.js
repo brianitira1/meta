@@ -227,6 +227,16 @@ currencyTwo = convertCurrency(currencyOne, exchageRate);
 
 console.log(currencyTwo);
 
+function calculateTotalPrice(Price, Tax) {
+  let calculation = Price * Tax;
+  console.log("total price is", calculation);
+}
+
+let shoePrice = 500;
+let shoeTax = 0.5;
+
+calculateTotalPrice(shoePrice, shoeTax);
+
 //recursion in javascript
 
 let counter = 3;
@@ -259,3 +269,16 @@ console.log(b);
 console.log(c);
 
 //object oriented programming
+
+let purchase1 = {
+  shoePrice: 500,
+  shoeTax: 0.5,
+
+  totalPrice: function () {
+    let calculation = purchase1.shoePrice * purchase1.shoeTax;
+
+    console.log("total price is", calculation);
+  },
+};
+
+purchase1.totalPrice();
