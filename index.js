@@ -169,3 +169,40 @@ function arrayBuilder(one, two, three) {
 }
 
 arrayBuilder("apple", "banana", "orange");
+
+console.log(Math.pow(2, 8));
+console.log(Math.max(4, 8, 12, 16, 20));
+console.log(Math.min(4, 8, 12, 16, 20));
+console.log(Math.random() * 20 + 1);
+
+var random = Math.floor(Math.random() * 6) + 1;
+console.log(random);
+
+console.log(Math.ceil(5.4));
+console.log(Math.floor(5.4));
+
+console.log(Math.round(5.4));
+console.log(Math.round(5.6));
+
+console.log(Math.trunc(5.4));
+console.log(Math.trunc(5.6));
+
+let randomNumber = Math.random() * 10;
+
+let roundedNumber = Math.ceil(randomNumber);
+
+console.log(randomNumber);
+console.log(roundedNumber);
+
+var parting = "goodbye";
+var name = "james";
+
+console.log(parting.concat(" ", name));
+
+parting.charAt(0).toUpperCase() + parting.slice(1);
+
+console.log(parting);
+
+console.log(parting.toUpperCase());
+
+console.log("john".concat(" ", "jane"));
