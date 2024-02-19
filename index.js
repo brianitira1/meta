@@ -301,3 +301,81 @@ function counterDecrement(value) {
 value = 30;
 
 counterDecrement(value);
+
+//classes in javascript
+
+class Car {
+  constructor(color, speed) {
+    this.color = color;
+    this.speed = speed;
+  }
+
+  turboOn() {
+    console.log("turbo on!");
+  }
+}
+
+const car1 = new Car("green", 300);
+
+car1.turboOn();
+
+function Car1(color, speed) {
+  let turboOn = false;
+
+  if (color === "green" && speed === 300) {
+    turboOn = true;
+    return "turbo on!";
+  }
+
+  return "turbo off";
+}
+
+const result = Car1("green", 300);
+console.log(result);
+
+const bicycle = {
+  bell: function () {
+    return "this is the bicycle bell";
+  },
+};
+
+const door = {
+  bell: function () {
+    return "this is the door bell";
+  },
+};
+
+door.bell();
+
+const ringTheBell = function (thing) {
+  console.log(thing.bell());
+};
+
+ringTheBell(door);
+ringTheBell(bicycle);
+
+class maths {
+  involvesCalculations() {
+    console.log("math is all about calculations");
+  }
+}
+
+class algebra extends maths {
+  involvesCalculations() {
+    super.involvesCalculations();
+    console.log("mmh, this type of math blows my mind");
+  }
+}
+
+class statistics extends maths {
+  involvesCalculations() {
+    super.involvesCalculations();
+    console.log("dont even start with this one haha");
+  }
+}
+
+let advancedAlgebra = new algebra();
+let advancedStatistics = new statistics();
+
+advancedAlgebra.involvesCalculations();
+advancedStatistics.involvesCalculations();
