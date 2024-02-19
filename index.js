@@ -206,3 +206,9 @@ console.log(parting);
 console.log(parting.toUpperCase());
 
 console.log("john".concat(" ", "jane"));
+
+var letters = "abc";
+
+letters.match(/a/);
+
+console.log(letters);
