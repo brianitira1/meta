@@ -272,13 +272,32 @@ console.log(c);
 
 let purchase1 = {
   shoePrice: 500,
-  shoeTax: 0.5,
+  shoeTax: 1.5,
 
   totalPrice: function () {
-    let calculation = purchase1.shoePrice * purchase1.shoeTax;
+    let calculation = this.shoePrice * this.shoeTax;
 
     console.log("total price is", calculation);
   },
 };
 
 purchase1.totalPrice();
+
+let counter1 = {
+  value: 10,
+  decrement: function () {
+    for (let i = this.value; i >= 1; i--) {
+      console.log(i);
+    }
+  },
+};
+
+counter1.decrement();
+
+function counterDecrement(value) {
+  for (let i = value; i >= 1; i = i - 1) console.log(i);
+}
+
+value = 30;
+
+counterDecrement(value);
