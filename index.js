@@ -513,3 +513,39 @@ class Add extends Calculator {
     return this.value1 + this.value2;
   }
 }
+
+class Subtract extends Calculator {
+  constructor(value1, value2) {
+    super("-", value1, value2);
+  }
+
+  getSub() {
+    return this.value1 - this.value2;
+  }
+}
+
+class Multiplication extends Calculator {
+  constructor(value1, value2) {
+    super("*", value1, value2);
+  }
+
+  getMulti() {
+    return this.value1 * this.value2;
+  }
+}
+
+class Division extends Calculator {
+  constructor(value1, value2) {
+    super("/", value1, value2);
+  }
+
+  getDivide() {
+    return this.value1 / this.value2;
+  }
+}
+
+const getDivision = new Division(3, 6);
+
+console.log(getDivision.getDivide());
+
+//dom manipulation
