@@ -554,7 +554,7 @@ console.log(getDivision.getDivide());
  */
 
 //the dom
-
+/*
 class Calculator {
   constructor(operator, value1, value2) {
     this.operator = operator;
@@ -589,3 +589,83 @@ function calculateFromTheDom() {
 
   resultDisplay.innerText = calculator.getResult();
 }
+
+*/
+
+//spread  operator
+
+let top3 = ["javascript", "c++", "python"];
+
+let spreadOperator = [...top3];
+
+console.log(spreadOperator);
+
+// rest operator
+
+let top5 = ["typescript", "mojo", "rust", "lua", "shell"];
+
+const [] = top5;
+
+const [first, second, third, ...secondVisit] = top5;
+
+console.log(secondVisit);
+
+let array2 = [1, 4, 5];
+
+function getArray2Sum() {
+  return array2.reduce((acc, currentValue) => acc + currentValue, 0);
+}
+
+console.log(getArray2Sum());
+
+class addTaxToPrices {
+  constructor(taxRate, itemsBought) {
+    this.taxRate = taxRate;
+    this.itemsBought = itemsBought;
+  }
+
+  sumItemsAddTax() {
+    let subTotal = this.itemsBought.reduce((acc, item) => acc + item.price, 0);
+    let taxAmount = subTotal * (this.taxRate / 100);
+    let totalAmount = subTotal + taxAmount;
+    return totalAmount;
+  }
+}
+
+let items = [
+  { name: "avocado", price: 50 },
+  { name: "smokie", price: 40 },
+  { name: "chapati", price: 30 },
+];
+
+let tax = 10;
+
+let myShoppingBag = new addTaxToPrices(tax, items);
+
+let myShoppingBagAfterTax = myShoppingBag.sumItemsAddTax();
+
+console.log(myShoppingBagAfterTax);
+
+class DoubleArray {
+  constructor(array) {
+    this.array = array;
+  }
+
+  arrayDoubleFunction() {
+    let doubledArray = [];
+    for (let i = 0; i < this.array.length; i = i + 1) {
+      let double = this.array[i] * 2;
+      doubledArray.push(double);
+    }
+    return doubledArray;
+  }
+}
+
+let myArray = [3, 4, 5];
+
+let newDoubledArray = new DoubleArray(myArray);
+console.log(newDoubledArray.arrayDoubleFunction());
+
+//javascript modules
+//es6  modules
+// common js require and module.exports
