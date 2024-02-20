@@ -493,3 +493,23 @@ let repetetiveFruits = ["mango", "apple", "mango", "orange", "apple"];
 let uniqueFruits = new Set(repetetiveFruits);
 
 console.log(uniqueFruits);
+
+//calculator
+
+class Calculator {
+  constructor(operator, value1, value2) {
+    this.operator = operator;
+    this.value1 = value1;
+    this.value2 = value2;
+  }
+}
+
+class Add extends Calculator {
+  constructor(value1, value2) {
+    super("+", value1, value2);
+  }
+
+  getSum() {
+    return this.value1 + this.value2;
+  }
+}
