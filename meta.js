@@ -580,14 +580,14 @@ class Calculator {
 }
 
 function calculateFromTheDom() {
-  value1 = parseFloat(document.getElementById("value1").value);
-  value2 = parseFloat(document.getElementById("value2").value);
-  operator = document.getElementById("operator").value;
+  let = value1 = parseFloat(document.getElementById("value1").value);
+  let = value2 = parseFloat(document.getElementById("value2").value);
+  let = operator = document.getElementById("operator").value;
 
   const calculator = new Calculator(operator, value1, value2);
   const resultDisplay = document.getElementById("result");
 
   calculator.getResult();
 
-  resultDisplay.innerText(calculator.getResult);
+  resultDisplay.innerText = calculator.getResult();
 }
