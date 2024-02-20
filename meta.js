@@ -1,4 +1,4 @@
-//javacript programming with meta software engineers
+/*//javacript programming with meta software engineers
 
 console.log("hello there javascript gurus");
 
@@ -492,7 +492,7 @@ console.log(bestFighters.get(1));
 let repetetiveFruits = ["mango", "apple", "mango", "orange", "apple"];
 let uniqueFruits = new Set(repetetiveFruits);
 
-console.log(uniqueFruits);
+console.log(uniqueFruits); */
 
 //calculator
 
@@ -568,7 +568,7 @@ class Calculator {
         return this.value1 + this.value2;
 
       case "-":
-        return this.value1 + this.value2;
+        return this.value1 - this.value2;
 
       case "*":
         return this.value1 * this.value2;
@@ -587,7 +587,5 @@ function calculateFromTheDom() {
   const calculator = new Calculator(operator, value1, value2);
   const resultDisplay = document.getElementById("result");
 
-  calculator.getResult();
-
-  resultDisplay.innerHTML = calculator.getResult();
+  resultDisplay.innerText = calculator.getResult();
 }
