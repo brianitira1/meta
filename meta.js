@@ -589,5 +589,5 @@ function calculateFromTheDom() {
 
   calculator.getResult();
 
-  resultDisplay.innerText = calculator.getResult();
+  resultDisplay.innerHTML = calculator.getResult();
 }
