@@ -1,4 +1,4 @@
-const { add } = require("nodemon/lib/rules");
+//javacript programming with meta software engineers
 
 console.log("hello there javascript gurus");
 
@@ -379,3 +379,117 @@ let advancedStatistics = new statistics();
 
 advancedAlgebra.involvesCalculations();
 advancedStatistics.involvesCalculations();
+
+const car3 = {
+  color: "orange",
+  speed: 400,
+};
+
+console.log(Object.values(car3));
+console.log(Object.keys(car3));
+console.log(Object.entries(car3));
+
+let cloathingItem = {
+  price: 500,
+  material: "cotton",
+  color: "green",
+};
+
+for (let key of Object.keys(cloathingItem)) {
+  console.log(cloathingItem[key]);
+}
+
+const grades = [50, 69, 56, 40, 30];
+
+let sum = 0;
+
+for (let i = 0; i < grades.length; i = i + 1) {
+  sum = sum + grades[i];
+}
+
+let avarage = sum / grades.length;
+
+console.log(avarage);
+
+class GradeBook {
+  constructor(grades) {
+    this.grades = grades;
+  }
+
+  calculateAvarage() {
+    let sum = 0;
+    for (let i = 0; i < this.grades.length; i++) {
+      sum = sum + this.grades[i];
+    }
+
+    return sum / this.grades.length;
+  }
+
+  addGrade(grade) {
+    this.grades.push(grade);
+  }
+
+  removeGrade(index) {
+    this.grades.splice(index, 1);
+  }
+}
+
+const myGrades = new GradeBook([60, 70, 34, 44, 54]);
+console.log(myGrades.calculateAvarage());
+
+myGrades.addGrade(60);
+console.log(myGrades.grades);
+console.log(Math.ceil(myGrades.calculateAvarage()));
+
+myGrades.removeGrade(0);
+console.log(myGrades.grades);
+console.log(Math.ceil(myGrades.calculateAvarage()));
+
+//for each method
+
+class Vitamins {
+  constructor(fruits) {
+    this.fruits = fruits;
+  }
+
+  appendIndex() {
+    this.fruits.forEach((fruit, index) => {
+      this.fruits[index] = `${index}_${fruit}`;
+    });
+  }
+}
+
+const myFruits = ["mango", "apple", "orange"];
+
+const vitamins = new Vitamins(myFruits);
+
+vitamins.appendIndex();
+
+console.log(vitamins.fruits);
+
+//map
+
+let array = [0, 10, 20, 30, 40, 50].map((num) => {
+  return num / 10;
+});
+
+console.log(array);
+
+//new map
+
+let bestFighters = new Map();
+
+bestFighters.set(1, "champion");
+bestFighters.set(2, "second best");
+bestFighters.set(3, "you are in third place");
+
+console.log(bestFighters);
+
+console.log(bestFighters.get(1));
+
+//set
+
+let repetetiveFruits = ["mango", "apple", "mango", "orange", "apple"];
+let uniqueFruits = new Set(repetetiveFruits);
+
+console.log(uniqueFruits);
