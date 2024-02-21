@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>expense tracker</title>
+    </head>
+    <body>
+
+        <div>
+
+        <h1>welcome to your expense tracker app</h1>
+
+        <h1>please select an expense or multiple expenses</h1>
+
+        <div>
+            <p>gloceries</p>
+            <input type="number" placeholder="price for gloceries">
+            <button id="addBtn" onclick="displaySelectedExpenses()">add</button>
+        </div>
+
+        <div>
+            <p >transportation</p>
+            <input type="number" placeholder="price for transportation">
+            <button id="addBtn"  onclick="displaySelectedExpenses()">add</button>
+        </div>
+
+        <div>
+            <p>utilities</p>
+            <input type="number" placeholder="price for utilities">
+            <button id="addBtn"  onclick="displaySelectedExpenses()">add</button>
+        </div>
+
+      <div>
+        <h2>selected expenses</h2>
+        <p id="selected"></p>
+        <button id = "compute" onclick="computeExpenses()">compute expenses</button>
+      </div>
+
+      <div>
+        <p id="result"></p>
+      </div>
+
+
+        </div>
+   
+        <script defer src="./expenseTracker.js"></script>
+    </body>
+</html>

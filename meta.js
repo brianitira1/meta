@@ -665,7 +665,7 @@ let myArray = [3, 4, 5];
 let newDoubledArray = new DoubleArray(myArray);
 console.log(newDoubledArray.arrayDoubleFunction());
 */
-
+/*
 function addToNumber(Usernumber) {
   return Usernumber + 5;
 }
@@ -686,3 +686,4 @@ let MyNumber = 10;
 let AddMynumber = new addToNumberOop(MyNumber);
 
 console.log(AddMynumber.addOop());
+*/

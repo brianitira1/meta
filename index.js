@@ -8,7 +8,7 @@ app.use(express.static("./"));
 app.use(cors());
 
 app.get("/", function (req, res) {
-  res.sendFile(path.resolve("calc.html"));
+  res.sendFile(path.resolve("expenseTracker.html"));
 });
 
 const PORT = process.env.PORT || 3000;
