@@ -554,7 +554,7 @@ console.log(getDivision.getDivide());
  */
 
 //the dom
-/*
+
 class Calculator {
   constructor(operator, value1, value2) {
     this.operator = operator;
@@ -590,8 +590,8 @@ function calculateFromTheDom() {
   resultDisplay.innerText = calculator.getResult();
 }
 
-*/
 
+/*
 //spread  operator
 
 let top3 = ["javascript", "c++", "python"];
@@ -665,6 +665,7 @@ let myArray = [3, 4, 5];
 
 let newDoubledArray = new DoubleArray(myArray);
 console.log(newDoubledArray.arrayDoubleFunction());
+*/
 
 //javascript modules
 //es6  modules
