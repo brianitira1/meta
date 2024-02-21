@@ -590,7 +590,6 @@ function calculateFromTheDom() {
   resultDisplay.innerText = calculator.getResult();
 }
 
-
 /*
 //spread  operator
 
@@ -667,6 +666,23 @@ let newDoubledArray = new DoubleArray(myArray);
 console.log(newDoubledArray.arrayDoubleFunction());
 */
 
-//javascript modules
-//es6  modules
-// common js require and module.exports
+function addToNumber(Usernumber) {
+  return Usernumber + 5;
+}
+
+console.log(addToNumber(10));
+
+class addToNumberOop {
+  constructor(UsernumberOop) {
+    this.UsernumberOop = UsernumberOop;
+  }
+  addOop() {
+    return this.UsernumberOop + 5;
+  }
+}
+
+let MyNumber = 10;
+
+let AddMynumber = new addToNumberOop(MyNumber);
+
+console.log(AddMynumber.addOop());
