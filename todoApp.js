@@ -38,6 +38,14 @@ class TodoApp {
         this.DeletePendingTask(index);
       });
 
+      let EditTaskButton = document.createElement("button");
+      EditTaskButton.textContent = "Edit Task";
+
+      EditTaskButton.addEventListener("click", () => {
+        let index = this.PendingTasks.indexOf(task);
+        this.EditTask(index);
+      });
+
       let MarkAsDoneButton = document.createElement("button");
       MarkAsDoneButton.textContent = "Mark As Done";
 
@@ -47,6 +55,7 @@ class TodoApp {
       });
 
       TaskItem.appendChild(TaskDeleteButton);
+      TaskItem.appendChild(EditTaskButton);
       TaskItem.appendChild(MarkAsDoneButton);
       PendingTaskList.appendChild(TaskItem);
     });
@@ -70,6 +79,12 @@ class TodoApp {
     let taskToMove = this.PendingTasks[index];
     this.PendingTasks.splice(index, 1);
     this.CompletedTasks.push(taskToMove);
+    this.UpdateUI();
+  }
+
+  EditTask(index) {
+    let newTask = prompt("enter new task!");
+    this.PendingTasks[index] = newTask;
     this.UpdateUI();
   }
 }
